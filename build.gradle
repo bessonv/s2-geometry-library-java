@@ -15,4 +15,5 @@ test {
     
     filter {
 	includeTestsMatching "*Test"
+    }
 }
