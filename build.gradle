@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'pmd'
 
 repositories {
     mavenCentral()
@@ -14,4 +15,9 @@ test {
     filter {
 	includeTestsMatching "com.google.common.geometry.*Test"
     }
+}
+
+pmd {
+    ignoreFailures = true
+    toolVersion = '6.8.0'
 }
