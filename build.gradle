@@ -9,3 +9,10 @@ dependencies {
     compile 'com.github.jsr:jsr:305'
     testImplementation "junit:junit:3.8.2"
 }
+
+test {
+    userJUnit()
+    
+    filter {
+	includeTestsMatching "*Test"
+}
