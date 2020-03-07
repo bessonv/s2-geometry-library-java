@@ -6,14 +6,12 @@ repositories {
 
 dependencies {
     implementation ("com.google.guava:guava:28.2-jre")
-    compile 'com.github.jsr:jsr:305'
+    compile group: 'com.github.jsr-330', name: 'core', version: '1.3.0'
     testImplementation "junit:junit:3.8.2"
 }
 
 test {
-    useJUnit()
-    
     filter {
-	includeTestsMatching "*Test"
+	includeTestsMatching "com.google.common.geometry.*Test"
     }
 }
